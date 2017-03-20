@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="611.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.view.RemotlyController">
+   <children>
+      <StackPane layoutX="126.0" layoutY="108.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="489.0" prefWidth="707.0" StackPane.alignment="CENTER">
+               <top>
+                  <ImageView fitHeight="133.0" fitWidth="863.0" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../tictactoe-logo.png" />
+                     </image>
+                  </ImageView>
+               </top>
+               <right>
+                  <AnchorPane>
+                     <children>
+                        <ListView fx:id="listView" layoutY="27.0" prefHeight="273.0" prefWidth="168.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0" BorderPane.alignment="CENTER">
+                           <padding>
+                              <Insets bottom="40.0" left="20.0" right="40.0" top="20.0" />
+                           </padding>
+                        </ListView>
+                        <Label alignment="CENTER" layoutX="2.0" layoutY="1.0" prefHeight="27.0" prefWidth="161.0" text="On Line Friends" textFill="#291b61" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="5.0">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </right>
+               <center>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding>
+                     <children>
+                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="600.0">
+                           <children>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="416.0" prefWidth="445.0">
+                                 <children>
+                                    <StackPane layoutX="-58.0" layoutY="-14.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="399.0" prefWidth="432.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="-58.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="-14.0">
+                                       <children>
+                                          <GridPane layoutX="67.0" layoutY="13.0" prefHeight="237.0" prefWidth="245.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="13.0" StackPane.alignment="CENTER">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button fx:id="c1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" />
+                                                <Button fx:id="c2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.columnIndex="1" />
+                                                <Button fx:id="c3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.columnIndex="2" />
+                                                <Button fx:id="c4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.rowIndex="1" />
+                                                <Button fx:id="c7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.rowIndex="2" />
+                                                <Button fx:id="c5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Button fx:id="c8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Button fx:id="c6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                <Button fx:id="c9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </center>
+               <left>
+                  <VBox prefHeight="249.0" prefWidth="114.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <StackPane prefHeight="302.0" prefWidth="114.0">
+                           <children>
+                              <AnchorPane prefHeight="309.0" prefWidth="111.0">
+                                 <children>
+                                    <Button fx:id="homeId" layoutX="20.0" layoutY="114.0" mnemonicParsing="false" onAction="#showHomeScreen" prefHeight="25.0" prefWidth="75.0" text="Home" />
+                                    <Button fx:id="backId" layoutX="20.0" layoutY="263.0" mnemonicParsing="false" onAction="#showChooseModeScreen" prefHeight="25.0" prefWidth="75.0" text="Back " />
+                                    <ToggleButton fx:id="onOffId" layoutX="20.0" layoutY="66.0" mnemonicParsing="false" onAction="#toogleButton" prefHeight="25.0" prefWidth="75.0" text="On/Off" />
+                                    <Button fx:id="saveId" layoutX="20.0" layoutY="164.0" mnemonicParsing="false" onAction="#showHomeScreen" prefHeight="25.0" prefWidth="75.0" text="Save" />
+                                    <Button fx:id="loadId" layoutX="20.0" layoutY="213.0" mnemonicParsing="false" onAction="#showChooseModeScreen" prefHeight="25.0" prefWidth="75.0" text="Load" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </left>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

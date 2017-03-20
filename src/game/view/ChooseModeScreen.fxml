@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.view.ChooseModeController">
+   <children>
+      <StackPane layoutX="176.0" layoutY="108.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER">
+               <top>
+                  <ImageView fitHeight="100.0" fitWidth="590.0" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../tictactoe-logo.png" />
+                     </image>
+                  </ImageView>
+               </top>
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="228.0" prefWidth="600.0">
+                           <children>
+                              <Button fx:id="pcId" layoutX="207.0" layoutY="52.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#showPcScreen" prefHeight="38.0" prefWidth="187.0" text="Play With Friend locally" AnchorPane.bottomAnchor="138.0" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="206.0" AnchorPane.topAnchor="52.0" />
+                              <Button fx:id="samePcId" layoutX="207.0" layoutY="114.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#showPcHumanScreen" prefHeight="38.0" prefWidth="187.0" text="Play With PC" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="206.0" AnchorPane.topAnchor="114.0" />
+                              <Button fx:id="chooseId" layoutX="207.0" layoutY="176.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#showRemotlyScreen" prefHeight="38.0" prefWidth="187.0" text="Remotly" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="206.0" AnchorPane.topAnchor="176.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </center>
+               <bottom>
+                  <Button fx:id="backHomeScreen" mnemonicParsing="false" onAction="#showHomeScreen" prefHeight="38.0" prefWidth="120.0" text="Back To Home" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="20.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </bottom>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

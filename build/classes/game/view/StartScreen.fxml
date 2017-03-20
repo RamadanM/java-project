@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.view.StartScreenController">
+   <top>
+      <ImageView fitHeight="114.0" fitWidth="595.0" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../tictactoe-logo.png" />
+         </image>
+      </ImageView>
+   </top>
+   <center>
+      <VBox prefHeight="252.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="222.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="newId" layoutX="225.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#clickme" prefHeight="40.0" prefWidth="150.0" text="New Game" AnchorPane.bottomAnchor="187.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="68.0" />
+                  <Button fx:id="aboutId" layoutX="225.0" layoutY="137.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#about" prefHeight="40.0" prefWidth="150.0" text="About" AnchorPane.bottomAnchor="118.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="137.0" />
+                  <Button fx:id="exitId" layoutX="225.0" layoutY="204.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="150.0" text="Exit" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="204.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

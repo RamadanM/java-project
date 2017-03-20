@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.view.PCController">
+   <children>
+      <StackPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="523.0" prefWidth="684.0">
+               <top>
+                  <ImageView fitHeight="100.0" fitWidth="596.0" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../tictactoe-logo.png" />
+                     </image>
+                  </ImageView>
+               </top>
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="600.0">
+                                 <children>
+                                    <Label fx:id="player2Name" alignment="CENTER" layoutX="349.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="10.0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="273.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="60.0" text="VS" textFill="#c91515" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold Italic" size="36.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="playerName" alignment="CENTER" layoutX="132.0" layoutY="15.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="10.0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="150.0" top="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </StackPane>
+                        <AnchorPane prefHeight="379.0" prefWidth="686.0">
+                           <children>
+                              <StackPane layoutX="113.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="246.0" prefWidth="510.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="113.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="-3.0">
+                                 <children>
+                                    <GridPane alignment="CENTER" layoutX="134.0" layoutY="23.0" prefHeight="234.0" prefWidth="510.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="162.0" AnchorPane.topAnchor="23.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <children>
+                                          <Button fx:id="b1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" />
+                                          <Button fx:id="b2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.columnIndex="1" />
+                                          <Button fx:id="b3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.columnIndex="2" />
+                                          <Button fx:id="b4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.rowIndex="1" />
+                                          <Button fx:id="b5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Button fx:id="b6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <Button fx:id="b7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.rowIndex="2" />
+                                          <Button fx:id="b8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Button fx:id="b9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </StackPane>
+                              <Button fx:id="homeId" layoutX="23.0" layoutY="56.0" mnemonicParsing="false" onAction="#showHomeScreen" prefHeight="25.0" prefWidth="65.0" text="Home" />
+                              <Button fx:id="backId" layoutX="23.0" layoutY="234.0" mnemonicParsing="false" onAction="#showChooseModeScreen" prefHeight="25.0" prefWidth="65.0" text="Back" />
+                              <Button fx:id="saveGamePc" layoutX="23.0" layoutY="111.0" mnemonicParsing="false" onAction="#saveAction" prefHeight="25.0" prefWidth="65.0" text="Save" />
+                              <Button fx:id="loadGamePc" layoutX="23.0" layoutY="177.0" mnemonicParsing="false" onAction="#loadSeq" prefHeight="25.0" prefWidth="65.0" text="load" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="S_RESIZE" />
+                           </cursor>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
