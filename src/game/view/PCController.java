@@ -103,10 +103,6 @@ public class PCController {
 
     @FXML
     void loadSeq(ActionEvent event) throws IOException {
-        //user = new PlayWithUser();
-
-                    
-        
         String s = con.getMatchSeq(con.getUserId(playerName.getText()), player2Name.getText());
         for (int i = 0; i < s.length(); i++) {
             places.add(s.charAt(i));
@@ -132,9 +128,7 @@ public class PCController {
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
         user = new PlayWithUser();
-
         board = new GameBoard();
-        //loadGamePc.setDisable(true);
         con = new DBConnection();
         anotherPlayerName = JOptionPane.showInputDialog("Please enter the second player name");
         playerName.setText(UserNameScreenController.getUserName());

@@ -1,5 +1,7 @@
 package game.view;
+
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
@@ -18,16 +20,22 @@ import javafx.stage.Stage;
 
 public class PCHumanController {
 
+    String name;
     boolean flag;
     public int X;
     public int O;
     private Button cells[];
+    DBConnection con;
+    ArrayList<String> ar;
+    Image OPic;
+    Image XPic;
+    ArrayList<Character> places;
 
     @FXML
     private Button saveId;
     @FXML
     private Button loadId;
-    
+
     @FXML
     private Button b1;
 
@@ -83,30 +91,61 @@ public class PCHumanController {
 
     @FXML
     void save(ActionEvent event) throws IOException {
-    
+        String gamePattern = con.getMatchSeq(con.getUserId(name), "#C#");
+        for (String s : ar) {
+            gamePattern += s;
+            System.out.println(gamePattern);
+        }
+        int uId = con.getUserId(name);
+        con.updateSeq(gamePattern, con.getUnCompletedMatchId(uId, "#C#"));
+
     }
-    
+
     @FXML
     void load(ActionEvent event) throws IOException {
-    
+
+        String s = con.getMatchSeq(con.getUserId(name), "#C#");
+        for (int i = 0; i < s.length(); i++) {
+            places.add(s.charAt(i));
+        }
+
+        int counter = 0;
+        for (char p : places) {
+            if (counter % 2 == 0) {
+                cells[Character.getNumericValue(p)].setGraphic(new ImageView(XPic));
+                cells[Character.getNumericValue(p)].setUserData(true);
+                flag = true;
+            } else {
+                cells[Character.getNumericValue(p)].setGraphic(new ImageView(OPic));
+                cells[Character.getNumericValue(p)].setUserData(true);
+            }
+            System.out.println(Character.getNumericValue(p));
+            counter++;
+
+        }
+
     }
-    
-    
+
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
+        places = new ArrayList<Character>();
+        con = new DBConnection();
+        ar = new ArrayList<String>();
+        name = UserNameScreenController.getUserName();
         X = 1;
         O = 2;
         ComputerPlayer ai = new ComputerPlayer();
-        Image OPic;
-        Image XPic;
+        OPic = new Image(getClass().getResourceAsStream("o.png"));
+        XPic = new Image(getClass().getResourceAsStream("x.png"));
+        if (!con.haveAGame(con.getUserId(name), "#C#")) {
+            con.isGameDataInserted("", 0, con.getUserId(name), 0, "#C#");
+        }
+
         cells = new Button[]{b1, b2, b3, b4, b5, b6, b7, b8, b9};
         for (Button cell : cells) {
             // cell.setMinSize(75, 100);
             cell.setUserData(false);
         }
-
-        OPic = new Image(getClass().getResourceAsStream("o.png"));
-        XPic = new Image(getClass().getResourceAsStream("x.png"));
 
         GameBoard board = new GameBoard();
         for (Button cell : cells) {
@@ -119,19 +158,22 @@ public class PCHumanController {
                     for (int i = 0; i < cells.length; ++i) {
                         if (cell == cells[i]) {
                             index = i;
+                            ar.add(Integer.toString(i));
+
                         }
                     }
                     ai.placeAMove(new Point(index / 3, index % 3), X);
 
                     boolean mark = true;
                     int next = ai.returnNextMove();
-                    if (next != -1) //If the game isn't finished yet!
+                    if (next != -1) //If the game isnna't finished yet!
                     {
                         int indexCell = next;
 
                         cells[indexCell].setGraphic(new ImageView(OPic));
                         cells[indexCell].setUserData(mark); //Used!
                         ai.placeAMove(new Point(indexCell / 3, indexCell % 3), O);
+                        ar.add(Integer.toString(indexCell));
                         cell.setUserData(mark);
                     }
                     if (ai.isGameOver()) {

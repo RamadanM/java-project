@@ -60,7 +60,7 @@
                                           <Insets left="15.0" top="80.0" />
                                        </StackPane.margin>
                                     </Button>
-                                    <Button fx:id="saveId" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="70.0" text="Save" StackPane.alignment="CENTER_RIGHT">
+                                    <Button fx:id="saveId" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#save" onDragDetected="#save" prefHeight="25.0" prefWidth="70.0" text="Save" StackPane.alignment="CENTER_RIGHT">
                                        <StackPane.margin>
                                           <Insets bottom="80.0" right="10.0" />
                                        </StackPane.margin>
